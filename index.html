@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -25,8 +26,8 @@
       <nav>
         <ul class="nav-links" id="nav-links">
           <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#proyectos">Proyectos</a></li>
           <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
           <li><a href="#contactos" class="btn btn-primary">Contactanos</a></li>
         </ul>
       </nav>
@@ -37,7 +38,7 @@
     <section id="hero" class="hero">
       <div class="container hero-inner">
         <p class="hero-subheading">Grupo Gobecon</p>
-        <h1 class="hero-heading">Líderes en calidad <br>de construcción <br>e infraestructura</h1>
+        <h1 class="hero-heading">Líderes en calidad <br class="hero-break">de construcción <br class="hero-break">e infraestructura</h1>
         <div class="hero-actions">
           <a href="#contactos" class="btn btn-primary">Cotizar</a>
           <a href="#proyectos" class="btn btn-outline">
@@ -69,36 +70,344 @@
           </div>
         </div>
       </div>
-    </section>
+    </section>    
 
-    <section id="proyectos" class="section">
+    <section id="sobre-nosotros" class="section reveal">
+      <div class="container">
+        <div class="about-grid">
+        <div class="about-content">
+          <h2>Sobre Nosotros</h2>
+          <p class="about-intro">Somos una empresa competitiva en el mercado del área de la construcción en la República Dominicana, acumulando una vasta experiencia a través del ejercicio de la ingeniería.</p>
+
+          <div class="accordion">
+            <div class="accordion-item">
+              <button class="accordion-trigger" type="button" aria-expanded="false">
+                Misión
+                <svg class="accordion-icon" width="14" height="14" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M50 15.95L43.1316 9.08203L25 27.2137L6.86836 9.08203L0 15.95L25 40.95L50 15.95Z" fill="currentColor"/>
+                </svg>
+              </button>
+              <div class="accordion-panel">
+                <p>Somos una empresa de servicios de ingeniería, diseño y construcción, orientada a satisfacer las necesidades habitacionales y comerciales de nuestros clientes, a través de la ejecución de proyectos basados en la calidad del servicio, con un equipo de trabajo comprometido con la excelencia.</p>
+              </div>
+            </div>
+            <div class="accordion-item is-open">
+              <button class="accordion-trigger" type="button" aria-expanded="true">
+                Visión
+                <svg class="accordion-icon" width="14" height="14" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M50 15.95L43.1316 9.08203L25 27.2137L6.86836 9.08203L0 15.95L25 40.95L50 15.95Z" fill="currentColor"/>
+                </svg>
+              </button>
+              <div class="accordion-panel">
+                <p>Ser una empresa prominente en el negocio de la construcción, que brinde soluciones adecuadas a la necesidad de cada cliente, cumpliendo con los más altos estándares de calidad.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-trigger" type="button" aria-expanded="false">
+                Valores
+                <svg class="accordion-icon" width="14" height="14" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M50 15.95L43.1316 9.08203L25 27.2137L6.86836 9.08203L0 15.95L25 40.95L50 15.95Z" fill="currentColor"/>
+                </svg>
+              </button>
+              <div class="accordion-panel">
+                <ul class="accordion-list">
+                  <li>Precios altamente competitivos.</li>
+                  <li>Eficacia, Efectividad y Eficiencia en los tiempos proyectados.</li>
+                  <li>Calidad 100% en los proyectos.</li>
+                  <li>Recursos humanos, logística y equipos de alto nivel.</li>
+                  <li>Orientación a los resultados, basado en la planificación, ejecución y control.</li>
+                  <li>Mejora continua y buenas prácticas en el campo de la construcción.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-media">
+          <img src="images/construction site.avif" alt="Proyecto de construcción de Grupo Gobecon">
+        </div>
+        </div>
+
+        <div class="about-stats">
+          <div class="stat-card">
+            <span class="stat-number">2012</span>
+            <span class="stat-label">Año de Establecimiento</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Proyectos Completados</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">2</span>
+            <span class="stat-label">Proyectos en Curso</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="proyectos" class="section reveal">
       <div class="container">
         <h2>Proyectos</h2>
-        <p>Proyectos section content.</p>
+
+        <div class="project-tabs" role="tablist">
+          <button class="project-tab is-active" type="button" data-project="tower-v">Renaissance Tower V</button>
+          <button class="project-tab" type="button" data-project="tower-iv">Renaissance Tower IV</button>
+          <button class="project-tab" type="button" data-project="tower-iii">Renaissance Tower III</button>
+        </div>
+
+        <div class="project-panels">
+          <div class="project-panel is-active" data-project-panel="tower-v">
+            <div class="project-details">
+              <div class="project-info">
+                <h3 class="project-title">Renaissance Tower V</h3>
+                <p class="project-location">
+                  <img src="images/icons/icon-pin.svg" alt="" class="project-location-icon">
+                  La Julia
+                </p>
+                <p class="project-description">Torre residencial de lujo de 13 pisos. Apartamentos de 1, 2 y 3 habitaciones ubicados en el sector La Julia, D.N., con tamaños que van desde 87.5 m2 a 230 m2.</p>
+                <div class="project-meta">
+                  <div class="project-meta-item">
+                    <span class="project-meta-label">Desde</span>
+                    <span class="project-meta-value">US$ 186,000.00</span>
+                  </div>
+                  <div class="project-meta-item">
+                    <span class="project-meta-label">Fecha de entrega</span>
+                    <span class="project-meta-value">Junio del Año 2026</span>
+                  </div>
+                </div>
+                <ul class="project-amenities">
+                  <li>Lobby climatizado</li>
+                  <li>3 ascensores de última generación</li>
+                  <li>Piscina y sauna</li>
+                  <li>Gym equipado</li>
+                  <li>Área de juego para niños</li>
+                  <li>Salón multiusos</li>
+                  <li>Lounge último piso (13avo nivel)</li>
+                </ul>
+              </div>
+
+              <div class="project-gallery">
+                <div class="gallery-main swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/rt-5/main.avif" alt="Renaissance Tower V"></div>
+                    <div class="swiper-slide"><img src="images/rt-5/image-01.avif" alt="Renaissance Tower V"></div>
+                    <div class="swiper-slide"><img src="images/rt-5/image-02.avif" alt="Renaissance Tower V"></div>
+                    <div class="swiper-slide"><img src="images/rt-5/image-03.avif" alt="Renaissance Tower V"></div>
+                  </div>
+                  <button class="gallery-nav gallery-prev" type="button" aria-label="Anterior">‹</button>
+                  <button class="gallery-nav gallery-next" type="button" aria-label="Siguiente">›</button>
+                </div>
+                <div class="gallery-thumbs swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/rt-5/main.avif" alt=""></div>
+                    <div class="swiper-slide"><img src="images/rt-5/image-01.avif" alt=""></div>
+                    <div class="swiper-slide"><img src="images/rt-5/image-02.avif" alt=""></div>
+                    <div class="swiper-slide"><img src="images/rt-5/image-03.avif" alt=""></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-map">
+              <iframe
+                src="https://www.google.com/maps?q=La+Julia,+Santo+Domingo,+Dominican+Republic&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Ubicación de Renaissance Tower V"></iframe>
+            </div>
+          </div>
+
+          <div class="project-panel" data-project-panel="tower-iv">
+            <div class="project-details">
+              <div class="project-info">
+                <h3 class="project-title">Renaissance Tower IV</h3>
+                <p class="project-location">
+                  <img src="images/icons/icon-pin.svg" alt="" class="project-location-icon">
+                  Los Cacicazgos
+                </p>
+                <p class="project-description">Torre residencial de lujo de 9 pisos. Apartamentos de 1, 2 y 3 habitaciones ubicados en el sector Los Cacicazgos, D.N., con tamaños que van desde 82 m2 a 155 m2.</p>
+                <div class="project-meta">
+                  <div class="project-meta-item">
+                    <span class="project-meta-label">Desde</span>
+                    <span class="project-meta-value">US$ 185,850.00</span>
+                  </div>
+                  <div class="project-meta-item">
+                    <span class="project-meta-label">Fecha de entrega</span>
+                    <span class="project-meta-value">Junio del Año 2025</span>
+                  </div>
+                </div>
+                <ul class="project-amenities">
+                  <li>Lobby climatizado</li>
+                  <li>2 ascensores de última generación</li>
+                  <li>Piscina y sauna</li>
+                  <li>Gym equipado</li>
+                  <li>Área de juegos para niños</li>
+                  <li>Salón multiusos</li>
+                </ul>
+              </div>
+
+              <div class="project-gallery">
+                <div class="gallery-main swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/rt-4/main.avif" alt="Renaissance Tower IV"></div>
+                    <div class="swiper-slide"><img src="images/rt-4/image-01.avif" alt="Renaissance Tower IV"></div>
+                    <div class="swiper-slide"><img src="images/rt-4/image-02.avif" alt="Renaissance Tower IV"></div>
+                    <div class="swiper-slide"><img src="images/rt-4/image-03.avif" alt="Renaissance Tower IV"></div>
+                    <div class="swiper-slide"><img src="images/rt-4/image-04.avif" alt="Renaissance Tower IV"></div>
+                  </div>
+                  <button class="gallery-nav gallery-prev" type="button" aria-label="Anterior">‹</button>
+                  <button class="gallery-nav gallery-next" type="button" aria-label="Siguiente">›</button>
+                </div>
+                <div class="gallery-thumbs swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/rt-4/main.avif" alt=""></div>
+                    <div class="swiper-slide"><img src="images/rt-4/image-01.avif" alt=""></div>
+                    <div class="swiper-slide"><img src="images/rt-4/image-02.avif" alt=""></div>
+                    <div class="swiper-slide"><img src="images/rt-4/image-03.avif" alt=""></div>
+                    <div class="swiper-slide"><img src="images/rt-4/image-04.avif" alt=""></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-map">
+              <iframe
+                src="https://www.google.com/maps?q=Los+Cacicazgos,+Santo+Domingo,+Dominican+Republic&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Ubicación de Renaissance Tower IV"></iframe>
+            </div>
+          </div>
+
+          <div class="project-panel" data-project-panel="tower-iii">
+            <div class="project-details">
+              <div class="project-info">
+                <h3 class="project-title">Renaissance Tower III</h3>
+                <p class="project-location">
+                  <img src="images/icons/icon-pin.svg" alt="" class="project-location-icon">
+                  Los Cacicazgos
+                </p>
+                <p class="project-description">Torre residencial de lujo de 9 pisos. Apartamentos de 1, 2 y 3 habitaciones ubicados en el sector Los Cacicazgos, D.N., con tamaños que van desde 74 m2 a 160 m2.</p>
+                <div class="project-meta">
+                  <div class="project-meta-item">
+                    <span class="project-meta-label">Estado</span>
+                    <span class="project-meta-value">Completado en el año 2022</span>
+                  </div>
+                </div>
+                <ul class="project-amenities">
+                  <li>Lobby climatizado</li>
+                  <li>3 ascensores de última generación</li>
+                  <li>Piscina y sauna</li>
+                  <li>Gym equipado</li>
+                  <li>Área de juego para niños</li>
+                  <li>Salón multiusos</li>
+                </ul>
+              </div>
+
+              <div class="project-gallery">
+                <div class="gallery-main swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/rt-3/main.avif" alt="Renaissance Tower III"></div>
+                    <div class="swiper-slide"><img src="images/rt-3/image-01.avif" alt="Renaissance Tower III"></div>
+                    <div class="swiper-slide"><img src="images/rt-3/image-02.avif" alt="Renaissance Tower III"></div>
+                    <div class="swiper-slide"><img src="images/rt-3/image-03.avif" alt="Renaissance Tower III"></div>
+                  </div>
+                  <button class="gallery-nav gallery-prev" type="button" aria-label="Anterior">‹</button>
+                  <button class="gallery-nav gallery-next" type="button" aria-label="Siguiente">›</button>
+                </div>
+                <div class="gallery-thumbs swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/rt-3/main.avif" alt=""></div>
+                    <div class="swiper-slide"><img src="images/rt-3/image-01.avif" alt=""></div>
+                    <div class="swiper-slide"><img src="images/rt-3/image-02.avif" alt=""></div>
+                    <div class="swiper-slide"><img src="images/rt-3/image-03.avif" alt=""></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-map">
+              <iframe
+                src="https://www.google.com/maps?q=Los+Cacicazgos,+Santo+Domingo,+Dominican+Republic&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Ubicación de Renaissance Tower III"></iframe>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="sobre-nosotros" class="section">
+    <section id="contactos" class="section reveal">
       <div class="container">
-        <h2>Sobre Nosotros</h2>
-        <p>Sobre Nosotros section content.</p>
-      </div>
-    </section>
+        <h2>Contacto</h2>
 
-    <section id="contactos" class="section">
-      <div class="container">
-        <h2>Contactos</h2>
-        <p>Contactos section content.</p>
+        <div class="contact-grid">
+          <div class="contact-form-wrap">
+            <form class="contact-form">
+              <h3 class="contact-subheading">Preguntas</h3>
+              <div class="form-field">
+                <input type="text" name="nombre" placeholder="Nombre" required>
+              </div>
+              <div class="form-row">
+                <div class="form-field">
+                  <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="form-field">
+                  <input type="tel" name="telefono" placeholder="Teléfono">
+                </div>
+              </div>
+              <div class="form-field">
+                <textarea name="mensaje" placeholder="Mensaje" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+
+            <div class="contact-thanks" hidden>
+              <h3 class="contact-subheading">¡Gracias!</h3>
+              <p>Hemos recibido tu mensaje. Nuestro equipo te contactará pronto.</p>
+            </div>
+          </div>
+
+          <div class="contact-info">
+            <h3 class="contact-subheading">Oficina Principal</h3>
+            <p class="contact-address">Av. 27 de Febrero, no. 495, Torre Forum, Suite C-8, El Millón, Sto. Dgo., D. N., Rep. Dom.</p>
+            <p class="contact-detail"><a href="mailto:g.gobecon@gmail.com">g.gobecon@gmail.com</a></p>
+            <p class="contact-detail">Cel: <a href="tel:+18098583691">809-858-3691</a> / <a href="tel:+18092589918">809-258-9918</a></p>
+            <p class="contact-detail">Oficina: <a href="tel:+18097405186">809-740-5186</a></p>
+          </div>
+        </div>
+
+        <div class="contact-map">
+          <iframe
+            src="https://www.google.com/maps?q=Av.+27+de+Febrero+495,+El+Millón,+Santo+Domingo,+Dominican+Republic&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Ubicación de Grupo Gobecon"></iframe>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; 2026 Gobecon. All rights reserved.</p>
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="images/logo-whiter.png" alt="Grupo Gobecon" class="footer-logo">
+          <p class="footer-address">Av. 27 de Febrero, no. 495, Torre Forum, Suite C-8,<br>El Millón, Sto. Dgo., D. N., Rep. Dom.</p>
+        </div>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><img src="images/icons/icon-facebook.svg" alt=""></a>
+          <a href="#" aria-label="Instagram"><img src="images/icons/icon-instagram.svg" alt=""></a>
+          <a href="#" aria-label="TikTok"><img src="images/icons/icon-tiktok.svg" alt=""></a>
+          <a href="#" aria-label="X"><img src="images/icons/icon-x.svg" alt=""></a>
+        </div>
+      </div>
+      <p class="footer-copyright">&copy; 2026 Grupo Gobecon</p>
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
