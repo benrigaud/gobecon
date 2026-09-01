@@ -62,6 +62,20 @@ document.addEventListener('DOMContentLoaded', () => {
     revealEls.forEach((el) => observer.observe(el));
   }
 
+  const builtBy = document.querySelector('.built-by');
+  const siteFooter = document.querySelector('.site-footer');
+
+  if (builtBy && siteFooter) {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        builtBy.classList.toggle('is-visible', entry.isIntersecting);
+      },
+      { threshold: 0.2 }
+    );
+
+    observer.observe(siteFooter);
+  }
+
   const accordionItems = document.querySelectorAll('.accordion-item');
 
   accordionItems.forEach((item) => {
